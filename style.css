@@ -13,3 +13,7 @@ body {
   border: 2px solid black;
 }
 
+.cell {
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
