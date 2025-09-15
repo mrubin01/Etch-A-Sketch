@@ -5,8 +5,8 @@ function createGrid(size) {
     for (let i = 0; i < size; i++) {
         const cell = document.createElement("div");
         cell.classList.add("cell");
-        cell.style.width = "16px";
-        cell.style.height = "16px";
+        cell.style.width = "30px";
+        cell.style.height = "30px";
 
         grid.appendChild(cell);
     }
