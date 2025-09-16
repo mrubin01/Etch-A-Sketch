@@ -12,7 +12,7 @@ function createGrid(size = 16) {
         cell.className = "cell"; 
 
         // column width in %
-        cell.style.flex = `0 0 ${flexBasisPercent}%` // --> 100 / 16 = 6.25
+        cell.style.flex = "0 0 6.25%" // --> 100 / 16 = 6.25
         
         // this is to keep the cells square
         cell.style.aspectRatio = "1/1"; 
