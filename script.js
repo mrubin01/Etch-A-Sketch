@@ -1,4 +1,5 @@
 const grid = document.getElementById("grid");
+const resizeButton = document.getElementById("resizeButton"); 
 
 function createGrid(size = 16) {
     // clean previous html
@@ -29,6 +30,19 @@ function createGrid(size = 16) {
         grid.appendChild(cell);
     }
 }
+
+// button
+resizeButton.addEventListener("click", () => {
+    let input = prompt("Enter the number of cells per side (1-100): ");
+
+    let size = parseInt(input);
+
+    if (!Number.isNaN(size) && size >= 1 && size <= 100) {
+        console.log("Ok");
+    } else {
+        alert("Please enter a valid number"); 
+    }
+})
 
 // build the 16x16 grid once DOM is ready, but createGrid(16) works as well
 document.addEventListener('DOMContentLoaded', () => {
