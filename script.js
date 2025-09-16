@@ -1,5 +1,6 @@
 const grid = document.getElementById("grid");
 const resizeButton = document.getElementById("resizeButton"); 
+const palette = ["red", "green", "blue", "yellow", "orange", "black", "cyan", "magenta", "pink", "purple"]; 
 
 function createGrid(size = 16) {
     // clean previous html
@@ -20,7 +21,7 @@ function createGrid(size = 16) {
 
         // add the hover effect
         cell.addEventListener("mouseenter", () => {
-            cell.style.backgroundColor = "blue"; 
+            cell.style.backgroundColor = getRandomColor(); 
         })
 
         // remove the hover effect when the mouse goes onto another cell
@@ -44,6 +45,12 @@ resizeButton.addEventListener("click", () => {
         alert("Please enter a valid number"); 
     }
 })
+
+// random color for the hovering effect
+function getRandomColor() {
+    const index = Math.floor(Math.random() * palette.length); 
+    return palette[index]; 
+}
 
 // build the 16x16 grid once DOM is ready, but createGrid(16) works as well
 document.addEventListener('DOMContentLoaded', () => {
