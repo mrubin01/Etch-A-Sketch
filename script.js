@@ -5,7 +5,6 @@ function createGrid(size = 16) {
     grid.innerHTML = "";
 
     const cells = size * size;
-    const flexBasisPercent = 100 / size;
 
     for (let i = 0; i < cells; i++) {
         const cell = document.createElement("div");
@@ -21,7 +20,7 @@ function createGrid(size = 16) {
     }
 }
 
-// build the 16x16 grid once DOM is ready
+// build the 16x16 grid once DOM is ready, but createGrid(16); works as well
 document.addEventListener('DOMContentLoaded', () => {
   createGrid(16);
 });
