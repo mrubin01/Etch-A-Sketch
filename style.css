@@ -8,12 +8,11 @@ body {
 #grid {
   display: flex;
   flex-wrap: wrap;
-  width: 480px;
-  height: 480px;
   border: 2px solid black;
 }
 
 .cell {
-  border: 1px solid #ddd;
-  box-sizing: border-box;
+  border: 1px solid #e6e6e6;
+  background: #fff;
 }
+
