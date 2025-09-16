@@ -5,6 +5,7 @@ function createGrid(size = 16) {
     grid.innerHTML = "";
 
     const cells = size * size;
+    const flexBasisPercent = 100 / size;
 
     for (let i = 0; i < cells; i++) {
         const cell = document.createElement("div");
