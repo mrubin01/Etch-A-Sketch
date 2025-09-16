@@ -16,11 +16,16 @@ function createGrid(size = 16) {
         // this is to keep the cells square
         cell.style.aspectRatio = "1/1"; 
 
+        // add the hover effect
+        cell.addEventListener("mouseenter", () => {
+            cell.style.backgroundColor = "blue"; 
+        })
+
         grid.appendChild(cell);
     }
 }
 
-// build the 16x16 grid once DOM is ready, but createGrid(16); works as well
+// build the 16x16 grid once DOM is ready, but createGrid(16) works as well
 document.addEventListener('DOMContentLoaded', () => {
   createGrid(16);
 });
