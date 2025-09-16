@@ -21,6 +21,11 @@ function createGrid(size = 16) {
             cell.style.backgroundColor = "blue"; 
         })
 
+        // remove the hover effect when the mouse goes onto another cell
+        cell.addEventListener("mouseleave", () => {
+            cell.style.backgroundColor = "white"; 
+        })
+
         grid.appendChild(cell);
     }
 }
