@@ -1,7 +1,7 @@
-* { box-sizing: border-box; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  display: flex;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,17 +10,20 @@ body {
   padding: 24px;
 }
 
+main { text-align: center; }
+
 #grid {
+  width: 640px;           
+  max-width: 90vw;        
   display: flex;
-  flex-wrap: wrap;
-  width: 512px; 
-  border: 2px solid black;
+  flex-wrap: wrap;        
+  border: 2px solid #ccc;
   background: #fff;
 }
 
 .cell {
   border: 1px solid #e6e6e6;
-  background: #fff;
-  aspect-ratio: 1/1;
+  background: #ffffff;
+  aspect-ratio: 1 / 1;
 }
 
