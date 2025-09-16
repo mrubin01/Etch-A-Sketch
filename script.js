@@ -6,13 +6,14 @@ function createGrid(size = 16) {
     grid.innerHTML = "";
 
     const cells = size * size;
+    const widthPerc = 100 / size; 
 
     for (let i = 0; i < cells; i++) {
         const cell = document.createElement("div");
         cell.className = "cell"; 
 
         // column width in %
-        cell.style.flex = "0 0 6.25%" // --> 100 / 16 = 6.25
+        cell.style.flex = `0 0 ${widthPerc}%` // --> 100 / 16 = 6.25
         
         // this is to keep the cells square
         cell.style.aspectRatio = "1/1"; 
@@ -38,7 +39,7 @@ resizeButton.addEventListener("click", () => {
     let size = parseInt(input);
 
     if (!Number.isNaN(size) && size >= 1 && size <= 100) {
-        console.log("Ok");
+        createGrid(size); 
     } else {
         alert("Please enter a valid number"); 
     }
