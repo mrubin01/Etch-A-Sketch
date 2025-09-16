@@ -2,19 +2,25 @@
 
 body {
   display: flex;
-  flex-direction: column;
+  display: flex;
   align-items: center;
-  font-family: sans-serif;
+  justify-content: center;
+  font-family: system-ui, Arial, sans-serif;
+  background: #f7f7f7;
+  padding: 24px;
 }
 
 #grid {
   display: flex;
   flex-wrap: wrap;
+  width: 512px; 
   border: 2px solid black;
+  background: #fff;
 }
 
 .cell {
   border: 1px solid #e6e6e6;
   background: #fff;
+  aspect-ratio: 1/1;
 }
 
