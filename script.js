@@ -20,4 +20,7 @@ function createGrid(size = 16) {
     }
 }
 
-createGrid(16);
+// build the 16x16 grid once DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  createGrid(16);
+});
