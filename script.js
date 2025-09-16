@@ -1,12 +1,16 @@
 const grid = document.getElementById("grid");
 
-function createGrid(size) {
+function createGrid(size = 16) {
 
-    for (let i = 0; i < size; i++) {
+    for (let i = 0; i < size * size; i++) {
         const cell = document.createElement("div");
-        cell.classList.add("cell");
-        cell.style.width = "30px";
-        cell.style.height = "30px";
+        cell.className = "cell"; 
+
+        // column width in %
+        cell.style.flex = "0 0 6.25" // --> 100 / 16 = 6.25
+        
+        // this is to keep the cells square
+        cell.style.aspectRatio = "1 / 1"; 
 
         grid.appendChild(cell);
     }
